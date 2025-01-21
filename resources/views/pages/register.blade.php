@@ -13,16 +13,22 @@
 </head>
 <body>
     <div class="wrapper">
-        <form action="" method="POST">
+        <form action="{{ route('register') }}" method="POST">
             @csrf
             <h1>Регистрация</h1>
             <div class="input-box">
                 <input type="email" name="email" placeholder="E-mail" required>
                 <i class='bx bx-user'></i>
+                @error('email')
+                    <span class="error">{{ $message }}</span>
+                @enderror
             </div>
             <div class="input-box">
                 <input type="password" name="password" placeholder="Пароль" required>
                 <i class='bx bxs-key'></i>
+                @error('password')
+                    <span class="error">{{ $message }}</span>
+                @enderror
             </div>
             <button type="submit" class="btn">Зарегистрироваться</button>
             <div class="login-link">
