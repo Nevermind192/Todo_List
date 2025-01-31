@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <title>Document</title>
+    <title>TaskMate</title>
 </head>
 <body>
 <div class="wrapper">
@@ -25,7 +25,7 @@
             <i class='bx bxs-key'></i>
         </div>
         <div class="reset-password">
-            <a href="">Восстановить пароль</a>
+            <a href="{{ route('password.request') }}">Восстановить пароль</a>
         </div>
         @error('email')
         <span class="error error--login">{{ $message }}</span>
