@@ -14,26 +14,27 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #393b3a;
+    background: #1c1f24; /* Темный серый фон */
 }
 
 .wrapper {
     width: 450px;
-    background: #292b2a;
-    color: #c5c6c7;
+    background: #2a2f38; /* Темно-серый с легким оттенком синего */
+    color: #e3e3e3; /* Светлый текст для контраста */
     border-radius: 10px;
     padding: 30px 40px;
 }
 
 .wrapper--forgot-password p{
     font-size: 14px;
-    color: #ff9f45;
+    color: #27ae60; /* Зеленый для текста забытых паролей */
 }
 
 .wrapper h1{
     margin-bottom: 40px;
     font-size: 36px;
     text-align: center;
+    color: #e0e0e0; /* Белый текст заголовка */
 }
 
 .wrapper .input-box{
@@ -46,6 +47,7 @@ body{
 .wrapper label{
     display: block;
     margin-top: 20px;
+    color: #e0e0e0; /* Белый для меток */
 }
 
 .input-box input{
@@ -53,7 +55,7 @@ body{
     height: 100%;
     background: transparent;
     outline: none;
-    border: 2px solid rgb( 255, 255, 255, .2);
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Легкий белый бордер */
     border-radius: 15px;
     font-size: 16px;
     color: white;
@@ -61,7 +63,7 @@ body{
 }
 
 .input-box input::placeholder{
-    color: #636466;
+    color: #636466; /* Легкий серый для плейсхолдера */
 }
 
 .input-box i{
@@ -75,18 +77,19 @@ body{
 .wrapper .btn{
     width: 100%;
     height: 45px;
-    background: #d2d2d6;
+    background: #27ae60; /* Зеленая кнопка */
     border-radius: 15px;
-    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: white; /* Белый текст на кнопке */
     font-weight: 600;
     margin-top: 30px;
+    transition: background 0.3s;
 }
 
 .wrapper .btn:hover {
-    background: #9d9d9e;
+    background: #2d9853; /* Темный зеленый при наведении */
 }
 
 .wrapper .login-link{
@@ -96,21 +99,21 @@ body{
 }
 
 .login-link p a{
-    color: white;
+    color: #27ae60; /* Зеленый для ссылки */
     text-decoration: none;
     font-weight: 600;
 }
 
 .login-link p a:hover{
     text-decoration: underline;
-    color: #5b95cf;
+    color: #2d9853; /* Темный зеленый при наведении */
 }
 
 .wrapper .error{
     display: block;
     text-align: left;
     font-size: 12px;
-    color: #cf3636;
+    color: #e74c3c; /* Красный для ошибок */
 }
 
 .wrapper .error--login {
@@ -127,7 +130,7 @@ body{
 
 .reset-password a:hover {
     text-decoration: underline;
-    color: #5b95cf;
+    color: #2d9853; /* Темный зеленый при наведении */
 }
 
 .forgot-pass {
@@ -153,4 +156,3 @@ body{
     width: 200px; /* Настрой размер */
     margin: 10px 0;
 }
-
