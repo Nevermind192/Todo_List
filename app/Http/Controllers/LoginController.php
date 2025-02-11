@@ -31,7 +31,7 @@ class LoginController extends Controller
             ]);
         }
         $request->session()->regenerate();
-        return redirect()->intended('/home');
+        return redirect()->intended(route('tasks.index'));
     }
 
     public function logout(Request $request)

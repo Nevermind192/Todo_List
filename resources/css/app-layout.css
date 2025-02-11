@@ -1,0 +1,179 @@
+@import url('https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background: #1c1f24;
+    color: #e3e3e3;
+}
+
+.app-container {
+    display: flex;
+    width: 100%;
+}
+
+/* Боковая панель */
+.sidebar {
+    width: 220px;
+    background: #2a2f38;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 10px;
+    transition: width 0.3s ease-in-out;
+    overflow: visible;
+    position: relative;
+}
+
+/* Кнопка сворачивания */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-left: 6px;
+}
+
+.sidebar-header button {
+    background: none;
+    border: none;
+    color: #e3e3e3;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.logo {
+    color: #27ae60;
+    font-size: 18px;
+}
+
+/* Сворачивание боковой панели */
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .logo {
+    display: none;
+}
+
+.sidebar.collapsed .menu-item .menu-text {
+    display: none;
+}
+
+/* Подсказки при наведении в свернутом режиме */
+.sidebar.collapsed .menu-item {
+    position: relative;
+}
+
+.sidebar.collapsed .menu-item:hover::after {
+    content: attr(data-title);
+    position: absolute;
+    left: 100%;
+    background: #3a3f48;
+    color: white;
+    padding: 5px 10px;
+    white-space: nowrap;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.sidebar.collapsed .dropdown {
+    left: 120%; /* При свернутой панели меню будет справа от иконки */
+}
+
+.sidebar:not(.collapsed) .dropdown {
+    left: calc(60% + 10px); /* При развернутой панели отступаем немного в сторону */
+}
+
+/* Меню пользователя */
+.user-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.user-menu i {
+    font-size: 50px;
+    color: #e3e3e3;
+    transition: color 0.3s;
+}
+
+.user-menu i:hover {
+    color: #27ae60;
+}
+
+/* Меню аккаунта теперь справа */
+.dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background: #2a2f38;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    display: none;
+    flex-direction: column;
+    padding: 10px 0;
+    z-index: 10;
+    transition: left 0.3s ease-in-out;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #e3e3e3;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.dropdown a:hover {
+    background: #3a3f48;
+}
+
+.dropdown.active {
+    display: flex;
+}
+
+/* Меню */
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    color: #e3e3e3;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s;
+    width: 100%;
+    white-space: nowrap;
+    position: relative;
+}
+
+.menu-item i {
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: #27ae60;
+    color: #ffffff;
+}
